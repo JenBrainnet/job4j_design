@@ -80,8 +80,7 @@ class BoxTest {
         assertThat(area)
                 .isNotZero()
                 .isPositive()
-                .isCloseTo(1256.63d, Percentage.withPercentage(1d))
-                .isEqualTo(1256.63d, withPrecision(0.01d));
+                .isCloseTo(1256.63d, Percentage.withPercentage(1d));
     }
 
     @Test

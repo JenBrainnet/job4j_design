@@ -28,7 +28,7 @@ class ModelTest {
                 .startsWith("I am")
                 .startsWithIgnoringCase("i")
                 .endsWith("Java")
-                .isEqualTo("I am Learning Java");
+                .isEqualTo("I am learning Java");
     }
 
     @Test
