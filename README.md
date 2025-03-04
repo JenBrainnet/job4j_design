@@ -2,7 +2,7 @@
 
 Данный проект содержит решения задач курса <a href="https://job4j.ru/">Job4j</a>. В рамках проекта рассмотрены следующие темы:
 
-- **Структуры данных**: собственные реализации `ArrayList`, `LinkedList`, `HashMap`, `Set`, `Queue`, `Stack` и др.
+- **Структуры данных**: собственные реализации `Iterator`, `ArrayList`, `LinkedList`, `HashMap`, `Set`, `Queue`, `Stack` и др.
 
 - **Алгоритмы**: `Big O`, `Two pointers`, `Sliding Window`, жадные алгоритмы, сортировки, `DFS`, `BFS` и др.
 
