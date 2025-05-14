@@ -36,6 +36,24 @@ class ForwardLinkedTest {
     }
 
     @Test
+    void whenAddFirstThenElementsAppearInReverseOrder() {
+        ForwardLinked<Integer> list = new ForwardLinked<>();
+        list.addFirst(1);
+        list.addFirst(2);
+        list.addFirst(3);
+        assertThat(list).containsExactly(3, 2, 1);
+    }
+
+    @Test
+    void whenAddFirstThenSizeShouldIncrease() {
+        ForwardLinked<Integer> list = new ForwardLinked<>();
+        list.addFirst(1);
+        list.addFirst(2);
+        list.addFirst(3);
+        assertThat(list).hasSize(3);
+    }
+
+    @Test
     void whenAddAndGet() {
         list.add(3);
         list.add(4);
@@ -87,6 +105,15 @@ class ForwardLinkedTest {
         Iterator<Integer> iterator = list.iterator();
         assertThat(iterator.hasNext()).isTrue();
         list.add(3);
+        assertThatThrownBy(iterator::hasNext)
+                .isInstanceOf(ConcurrentModificationException.class);
+    }
+
+    @Test
+    void whenHasIteratorAndAddFirstThenHasNextExceptionThrown() {
+        Iterator<Integer> iterator = list.iterator();
+        assertThat(iterator.hasNext()).isTrue();
+        list.addFirst(3);
         assertThatThrownBy(iterator::hasNext)
                 .isInstanceOf(ConcurrentModificationException.class);
     }
