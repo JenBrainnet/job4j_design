@@ -3,6 +3,7 @@ package ru.job4j.tree;
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Queue;
+import java.util.function.Predicate;
 
 public class SimpleTree<E> implements Tree<E> {
 
@@ -24,16 +25,27 @@ public class SimpleTree<E> implements Tree<E> {
 
     @Override
     public Optional<Node<E>> findBy(E value) {
+        Predicate<Node<E>> condition = node -> node.value.equals(value);
+        return findByPredicate(condition);
+    }
+
+    @Override
+    public boolean isBinary() {
+        Predicate<Node<E>> condition = node -> node.children.size() > 2;
+        return findByPredicate(condition).isEmpty();
+    }
+
+    private Optional<Node<E>> findByPredicate(Predicate<Node<E>> condition) {
         Optional<Node<E>> result = Optional.empty();
-        Queue<Node<E>> data = new LinkedList<>();
-        data.offer(this.root);
-        while (!data.isEmpty()) {
-            Node<E> element = data.poll();
-            if (element.value.equals(value)) {
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(this.root);
+        while (!queue.isEmpty()) {
+            Node<E> element = queue.poll();
+            if (condition.test(element)) {
                 result = Optional.of(element);
                 break;
             }
-            data.addAll(element.children);
+            queue.addAll(element.children);
         }
         return result;
     }
