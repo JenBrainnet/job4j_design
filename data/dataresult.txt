@@ -1,1 +1,4 @@
-Hello, world!
+Hello, World!
+Some string
+10
+1,5
