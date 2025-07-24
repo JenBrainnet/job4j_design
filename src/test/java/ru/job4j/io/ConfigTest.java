@@ -43,4 +43,22 @@ class ConfigTest {
                 .hasMessage("Invalid format: expected \"key=value\" pattern");
     }
 
+    @Test
+    void whenPairWithMissingKey() {
+        String path = "./data/pair_with_missing_key.properties";
+        Config config = new Config(path);
+        assertThatThrownBy(config::load)
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid format: expected \"key=value\" pattern");
+    }
+
+    @Test
+    void whenPairWithMissingValue() {
+        String path = "./data/pair_with_missing_value.properties";
+        Config config = new Config(path);
+        assertThatThrownBy(config::load)
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid format: expected \"key=value\" pattern");
+    }
+
 }
