@@ -19,7 +19,7 @@ public class Analysis {
                     startTime = time;
                 } else if (!isErrorStatus(status) && !isAvailable) {
                     isAvailable = true;
-                    writer.println(startTime + ";" + time + ";");
+                    writer.printf("%s;%s;%n", startTime, time);
                 }
             }
         } catch (IOException e) {
