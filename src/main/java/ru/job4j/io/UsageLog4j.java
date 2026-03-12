@@ -25,6 +25,11 @@ public class UsageLog4j {
                 byteValue, shortValue, intValue, longValue,
                 floatValue, doubleValue, charValue, booleanValue
         );
+        try {
+            throw new Exception("Not supported code");
+        } catch (Exception e) {
+            LOG.error("Exception in log example", e);
+        }
     }
 
 }
