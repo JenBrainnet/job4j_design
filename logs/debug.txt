@@ -1,0 +1,5 @@
+2026-03-13 12:22:29,973 DEBUG ru.job4j.io.UsageLog4j:main:13 - User info name : Petr Arsentev, age : 33
+2026-03-13 12:22:29,978  INFO ru.job4j.io.UsageLog4j:main:22 - Primitive data types in Java: byte - 1, short - 2, int - 3, long - 4, float - 5.5, double - 6.6, char - A, boolean - false
+2026-03-13 12:22:29,979 ERROR ru.job4j.io.UsageLog4j:main:31 - Exception in log example
+java.lang.Exception: Not supported code
+	at ru.job4j.io.UsageLog4j.main(UsageLog4j.java:29)
