@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<booking confirmed="true" nights="6" hotelName="Hilton" guestName="Petr Arsentev">
+    <room type="Deluxe" number="305"/>
+    <services>
+        <service>SPA</service>
+        <service>Breakfast</service>
+        <service>Wi-Fi</service>
+    </services>
+</booking>

@@ -1,4 +1,4 @@
-package ru.job4j.serialization.json;
+package ru.job4j.serialization.json.laptop;
 
 import java.util.Arrays;
 

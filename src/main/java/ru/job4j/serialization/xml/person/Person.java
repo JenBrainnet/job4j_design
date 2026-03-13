@@ -1,4 +1,6 @@
-package ru.job4j.serialization.json;
+package ru.job4j.serialization.xml.person;
+
+import ru.job4j.serialization.json.person.Contact;
 
 import java.util.Arrays;
 
