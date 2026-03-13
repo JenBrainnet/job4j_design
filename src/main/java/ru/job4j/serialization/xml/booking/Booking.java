@@ -1,15 +1,32 @@
 package ru.job4j.serialization.xml.booking;
 
+import jakarta.xml.bind.annotation.*;
+
 import java.util.Arrays;
 
+@XmlRootElement(name = "booking")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Booking {
 
-    private final boolean confirmed;
-    private final int nights;
-    private final String hotelName;
-    private final String guestName;
-    private final Room room;
-    private final String[] services;
+    @XmlAttribute
+    private boolean confirmed;
+
+    @XmlAttribute
+    private int nights;
+
+    @XmlAttribute
+    private String hotelName;
+
+    @XmlAttribute
+    private String guestName;
+    private Room room;
+
+    @XmlElementWrapper(name = "services")
+    @XmlElement(name = "service")
+    private String[] services;
+
+    public Booking() {
+    }
 
     public Booking(boolean confirmed, int nights, String hotelName, String guestName, Room room, String[] services) {
         this.confirmed = confirmed;

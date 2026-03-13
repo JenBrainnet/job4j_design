@@ -1,9 +1,19 @@
 package ru.job4j.serialization.xml.booking;
 
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "room")
 public class Room {
 
-    private final String type;
-    private final int number;
+    @XmlAttribute
+    private String type;
+
+    @XmlAttribute
+    private int number;
+
+    public Room() {
+    }
 
     public Room(String type, int number) {
         this.type = type;
