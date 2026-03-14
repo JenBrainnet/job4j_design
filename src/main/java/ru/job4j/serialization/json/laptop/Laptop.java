@@ -18,6 +18,26 @@ public class Laptop {
         this.ports = ports;
     }
 
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public int getRam() {
+        return ram;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Chip getChip() {
+        return chip;
+    }
+
+    public String[] getPorts() {
+        return ports;
+    }
+
     @Override
     public String toString() {
         return "Laptop{"

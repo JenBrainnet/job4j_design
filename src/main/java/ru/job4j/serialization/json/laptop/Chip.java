@@ -10,6 +10,14 @@ public class Chip {
         this.cores = cores;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getCores() {
+        return cores;
+    }
+
     @Override
     public String toString() {
         return "Chip{"
