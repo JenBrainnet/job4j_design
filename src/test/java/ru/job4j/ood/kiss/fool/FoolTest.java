@@ -1,4 +1,4 @@
-package ru.job4j.kiss.fool;
+package ru.job4j.ood.kiss.fool;
 
 import org.junit.jupiter.api.Test;
 
