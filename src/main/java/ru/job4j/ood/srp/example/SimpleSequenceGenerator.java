@@ -1,4 +1,4 @@
-package ru.job4j.ood.srp;
+package ru.job4j.ood.srp.example;
 
 import java.util.List;
 import java.util.stream.Collectors;
